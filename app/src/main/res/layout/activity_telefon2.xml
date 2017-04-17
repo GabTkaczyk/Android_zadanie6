@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gabi.zadanie5.Telefon2">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewLG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LG G6"
+            android:textSize="40dp"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/lg"
+            android:layout_width="312dp"
+            android:layout_height="293dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/lg"
+            tools:layout_editor_absoluteX="36dp"
+            tools:layout_editor_absoluteY="64dp" />
+
+        <TextView
+            android:id="@+id/opisSamsung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="
+Wyświetlacz:
+5,7 cala, 2880 x 1440 pikseli
+
+Procesor:
+Qualcomm Snapdragon 821 MSM8996 Pro, czterordzeniowy 2,35 GHz
+
+System operacyjny:  Android 7 Nougat
+
+Pamięć RAM:  4 GB
+
+Pamięć wbudowana:  32 GB
+
+Aparat foto:  2 x 13 Mpix
+
+Komunikacja:
+Wi-Fi, Wi-Fi Direct, Bluetooth 4.2, NFC, USB, słuchawkowe
+
+Pojemność baterii:  3300 mAh
+
+Data premiery:  20.04.2017
+"/>
+        <Button
+            android:id="@+id/wstecz"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:onClick="cofnij"
+            android:text="wstecz"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

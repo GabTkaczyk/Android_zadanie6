@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">zadanie5</string>
+
+    <string-array name="modele">
+        <item>Samsung Galaxy S8</item>
+        <item>LG G6</item>
+        <item>Huawei P9 Lite 2017</item>
+        <item>dźiwęki</item>
+    </string-array>
+    <string-array name="hello_world">
+        <item>Hello World</item>
+        <item>Hallo Welt</item>
+        <item>Witaj Świecie</item>
+    </string-array>
+</resources>
