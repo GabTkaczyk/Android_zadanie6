@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
     android:id="@+id/glowny_layout"
     tools:context="com.example.gabi.zadanie5v2.MainActivity">
 
@@ -25,54 +24,141 @@
         android:id="@+id/listView"
         android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_alignParentStart="true">
+        </ListView>
 
-    <Button
-        android:id="@+id/buttonShowCustomDialog"
+    <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Custom Dialog"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="165dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/listView"
+        android:id="@+id/scrollView2">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/stopSound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/ID_nagrywaj"
+                android:layout_alignBottom="@+id/ID_nagrywaj"
+                android:layout_marginStart="35dp"
+                android:layout_toEndOf="@+id/ID_nagrywaj"
+                android:onClick="stopSound"
+                android:text="stop sound" />
+
+            <Button
+                android:id="@+id/buttonShowCustomDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Custom Dialog"
+                android:layout_weight="0.07" />
+
+            <Button
+                android:id="@+id/idProstyDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="ProstyDialog"
+                android:text="Prosty Dialog" />
+
+            <Button
+                android:id="@+id/ID_nagrywaj"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/scrollView2"
+                android:layout_marginTop="17dp"
+                android:onClick="nagraj"
+                android:text="nagraj"/>
 
     <Button
-        android:id="@+id/buttonWyjscie"
+        android:id="@+id/ID_stop_nagrywanie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Wyjscie"
-        android:layout_marginTop="68dp"
-        android:layout_alignTop="@+id/buttonShowCustomDialog"
-        android:layout_toEndOf="@+id/textView" />
-
-    <!--<Button-->
-        <!--android:id="@+id/stopSound"-->
-        <!--android:layout_width="60dp"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:text="stop"-->
-        <!--android:onClick="stopSound"-->
-        <!--android:layout_below="@+id/playSound"-->
-        <!--android:layout_alignEnd="@+id/buttonWyjscie"-->
-        <!--android:layout_marginTop="59dp" />-->
-    <Button
-        android:id="@+id/idProstyDialog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Prosty Dialog"
-        android:onClick="ProstyDialog"
-        android:layout_alignBaseline="@+id/buttonShowCustomDialog"
-        android:layout_alignBottom="@+id/buttonShowCustomDialog"
-        android:layout_alignStart="@+id/stopSound" />
+        android:layout_alignBaseline="@+id/ID_nagrywaj"
+        android:layout_alignBottom="@+id/ID_nagrywaj"
+        android:layout_toEndOf="@+id/ID_nagrywaj"
+        android:onClick="zatrzymaj nagrywanie"
+        android:text="zatrzymaj nagrywanie" />
 
     <Button
-        android:id="@+id/stopSound"
+        android:id="@+id/ID_odtworz_nagranie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="stop sound"
-        android:onClick="stopSound"
-        android:layout_alignBottom="@+id/buttonWyjscie"
-        android:layout_toEndOf="@+id/buttonWyjscie"
-        android:layout_marginStart="26dp" />
+        android:layout_alignTop="@+id/ID_nagrywaj"
+        android:layout_toEndOf="@+id/ID_stop_nagrywanie"
+        android:onClick="odtworz_nangranie"
+        android:text="odtworz nagranie"/>
 
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ID_nagrywaj"
+        android:layout_below="@+id/ID_nagrywaj"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:inputType="textPostalAddress" />
+
+            <Button
+                android:id="@+id/zapiszText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="SaveText"
+                android:text="zapisz tekst"
+                android:layout_below="@+id/editText1"
+                android:layout_alignStart="@+id/editText1"
+                android:layout_marginTop="29dp" />
+
+            <Button
+                android:id ="@+id/bTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="ViewText"
+                android:text= "Odczytaj z telefonu" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editText1"
+                android:layout_centerHorizontal="true"
+                android:text="TextView"/>
+
+            <Button
+                android:id="@+id/bSaveSd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="SaveSD"
+                android:text= "Zapisz na SD" />
+            <Button
+                android:id= "@+id/bViewSd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="ViewSD"
+                android:text="Odczytaj z SD"/>
+
+            <Button
+                android:id="@+id/buttonClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wycztysc i usun pliki"
+                android:onClick="clear"/>
+
+            <Button
+                android:id="@+id/buttonWyjscie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wyjscie"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/ID_nagrywaj"
+                android:layout_marginStart="24dp"
+                android:layout_marginBottom="49dp" />
+
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>
